@@ -1,9 +1,19 @@
 export class Recipe {
 
+	private id: number;
 	private name: string;
 
-	constructor(name: string) {
+	constructor(id: number, name: string) {
+		this.id = id;
 		this.name = name;
+	}
+
+	public getId() {
+		return this.id;
+	}
+
+	public setId(id: number) {
+		this.id = id;
 	}
 
 	public getName() {
@@ -13,4 +23,6 @@ export class Recipe {
 	public setName(name: string) {
 		this.name = name;
 	}
+
+
 }

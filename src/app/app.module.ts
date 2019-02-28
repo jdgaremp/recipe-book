@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SearchComponent } from './search/search.component';
-import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { AddRecipeComponent } from './recipe/add-recipe/add-recipe.component';
+import { EditRecipeComponent } from './recipe/edit-recipe/edit-recipe.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AddRecipeComponent } from './add-recipe/add-recipe.component';
     HomeComponent,
     HeaderComponent,
     SearchComponent,
-    AddRecipeComponent
+    AddRecipeComponent,
+    EditRecipeComponent
   ],
   imports: [
     BrowserModule,
