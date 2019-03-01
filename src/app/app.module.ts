@@ -8,6 +8,10 @@ import { HeaderComponent } from './shared/header/header.component';
 import { SearchComponent } from './search/search.component';
 import { AddRecipeComponent } from './recipe/add-recipe/add-recipe.component';
 import { EditRecipeComponent } from './recipe/edit-recipe/edit-recipe.component';
+import { TextFieldComponent } from './shared/text-field/text-field.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MsgBoxComponent } from './shared/msg-box/msg-box.component';
+import { RecipeTableComponent } from './recipe/recipe-table/recipe-table.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { EditRecipeComponent } from './recipe/edit-recipe/edit-recipe.component'
     HeaderComponent,
     SearchComponent,
     AddRecipeComponent,
-    EditRecipeComponent
+    EditRecipeComponent,
+    TextFieldComponent,
+    MsgBoxComponent,
+    RecipeTableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

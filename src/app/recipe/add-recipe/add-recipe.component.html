@@ -1,9 +1,21 @@
-<form>
-  <div class="form-group row">
-    <label for="recipeName" class="col-sm-2 col-form-label">Recipe name</label>
-    <input class="form-control" id="recipeName" type="text" placeholder="Enter the recipe's name">
-    <div class="col-sm-10">
-    </div>
+<section class="section">
+  <h1 class="title">Add recipe</h1>
+
+  <div className="container">
+    <app-text-field label="Name" [valueName]="FIRST_NAME_FIELD_VALUE_NAME" [val]="recipe.getName()" [errMessage]="'Invalid recipe name (can\'t be empty)'"
+      (valueChange)="onFieldChange($event)">
+    </app-text-field>
   </div>
-  <button id="saveButton" type="submit" class="btn btn-primary">Save recipe!</button>
-</form>
+
+  <div [ngSwitch]="viewState" class="container is-fluid">
+    <app-msg-box *ngSwitchCase="ADD_LOADING_STATE" colorClass="is-info">
+      Loading ...
+    </app-msg-box>
+    <app-msg-box *ngSwitchCase="ADD_ERROR_STATE" title="Error" colorClass="is-danger">
+      Sorry, an error occured please refresh
+    </app-msg-box>
+    <app-msg-box *ngSwitchCase="ADD_SUCCESS_STATE" colorClass="is-success">
+      Recipe added successfully.
+    </app-msg-box>
+  </div>
+</section>
